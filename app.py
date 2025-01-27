@@ -20,6 +20,7 @@ def connect_to_cloudsql():
             host=f"{INSTANCE_CONNECTION_NAME}",
             port="5432"
         )
+        print(connection)
         return connection
     except Exception as e:
         print(f"Error conectando a Cloud SQL: {e}")
