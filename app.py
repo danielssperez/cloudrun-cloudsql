@@ -26,7 +26,7 @@ def index():
     connection = connect_to_cloudsql()
     if connection:
         with connection.cursor() as cursor:
-            cursor.execute("SELECT * FROM test;")
+            cursor.execute("SELECT NOW();")
             result = cursor.fetchone()
         connection.close()
         return jsonify({"status": "success", "server_time": result[0]})
