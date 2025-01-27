@@ -27,7 +27,7 @@ def connect_to_cloudsql():
 
 @app.route("/")
 def index():
-    """Verifica la conexión a la base de datos"""
+    """Verifica_la conexión a la base de datos"""
     connection = connect_to_cloudsql()
     if connection:
         with connection.cursor() as cursor:
